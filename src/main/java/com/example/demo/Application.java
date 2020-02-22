@@ -18,14 +18,12 @@ public class Application {
 	@Bean
 	public CommandLineRunner demo(CarRepository carRepository) {
 		return args -> {
-			carRepository.save(new Car("Ford", "Modeo", "Red", 1993));
-			carRepository.save(new Car("Ford", "Modeo", "Red", 1993));
-			carRepository.save(new Car("Ford", "Modeo", "Red", 1993));
-			carRepository.save(new Car("Ford", "Modeo", "Red", 1993));
-			carRepository.save(new Car("Ford", "Modeo", "Red", 1993));
-			carRepository.save(new Car("Ford", "Modeo", "Red", 1993));
-			carRepository.save(new Car("Ford", "Modeo", "Red", 1993));
-			carRepository.save(new Car("Ford", "Modeo", "Red", 1993));
+			carRepository.save(new Car("1", "Ford", "Modeo", "Red", 1993));
+			carRepository.save(new Car("2", "Ford", "Modeo", "Red", 1993));
+			carRepository.save(new Car("3", "Ford", "Modeo", "Red", 1993));
+			carRepository.save(new Car("4", "Ford", "Modeo", "Red", 1993));
+			carRepository.save(new Car("5", "Ford", "Modeo", "Red", 1993));
+			carRepository.save(new Car("6", "Ford", "Modeo", "Red", 1993));
 		};
 	}
 

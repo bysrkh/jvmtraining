@@ -22,7 +22,7 @@ public class CarController {
     @GetMapping("/{id}")
     public Optional<Car> getCarById(@PathVariable("id") String id) {
 
-        return carRepository.findById(Long.parseLong(id));
+        return carRepository.findById(id);
     }
 
     @PostMapping
@@ -31,7 +31,7 @@ public class CarController {
     }
 
     @DeleteMapping
-    public void deleteCarById(@PathVariable("id") Long id) {
+    public void deleteCarById(@PathVariable("id") String id) {
 
         carRepository.deleteById(id);
     }

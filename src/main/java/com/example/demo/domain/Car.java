@@ -1,14 +1,12 @@
 package com.example.demo.domain;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 
 @Entity
+@Table(schema = "public", name = "car")
 public class Car {
-    @Id @GeneratedValue(strategy = GenerationType.AUTO)
-    private long id;
+    @Id
+    private String id;
     private String brand;
     private String model;
     private String color;
@@ -17,19 +15,19 @@ public class Car {
     public Car() {
     }
 
-
-    public Car(String brand, String model, String color, int year) {
+    public Car(String id, String brand, String model, String color, int year) {
+        this.id = id;
         this.brand = brand;
         this.model = model;
         this.color = color;
         this.year = year;
     }
 
-    public long getId() {
+    public String getId() {
         return id;
     }
 
-    public void setId(long id) {
+    public void setId(String id) {
         this.id = id;
     }
 
